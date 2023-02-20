@@ -63,7 +63,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 55px var(--margin);
+  margin: 40px var(--margin);
   white-space: nowrap;
 }
 
