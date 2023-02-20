@@ -1,39 +1,42 @@
-  :root {
-    --bg-color: #fafafa;
-    --primary-color: #0f0f0f;
-    --secondary-color: #757575;
-    --margin: clamp(20px, 6vw, 100px);
-  }
-  body{
-    font-family: "Poppins", sans-serif;
-    font-size: 1.125rem;
-  }
+:root {
+  --bg-color: #fafafa;
+  --primary-color: #0f0f0f;
+  --secondary-color: #757575;
+  --margin: clamp(20px, 6vw, 100px);
+}
+body {
+  font-family: "aktiv-grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem;
+}
 
-  header {
-    position: sticky;
-    z-index: 9;
-    display: flex;
-    justify-content: space-between;
-    margin: 55px var(--margin);
-    white-space: nowrap;
-  }
+header {
+  position: sticky;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  margin: 55px var(--margin);
+  white-space: nowrap;
+}
 
-  .logo{
-    width: 80px;
-    height: auto;
-  }
+.logo {
+  width: 80px;
+  height: auto;
+}
 
-  .navlist {
-    display: flex;
-    list-style: none;
-  }
-  .navlist a {
-    color: var(--primary-color);
-    font-weight: 300;
-    margin: 0 15px;
-    transition: color 0.45s ease;
-    text-decoration: none;
-  }
-  .navlist a:hover, a.active {
-    color: var(--secondary-color);
-  }
+.navlist {
+  display: flex;
+  list-style: none;
+}
+.navlist a {
+  color: var(--primary-color);
+  font-weight: 300;
+  margin: 0 15px;
+  transition: color 0.45s ease;
+  text-decoration: none;
+}
+.navlist a:hover,
+a.active {
+  color: var(--secondary-color);
+}
