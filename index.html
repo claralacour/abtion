@@ -168,10 +168,18 @@
 
         <section class="newsletter">
             <h3>9.716 har allerede tilmeldt sig vores email-liste.</h3>
-            <button>Tilmeld dig A-listen <span class="material-symbols-outlined">
+            <button id="open">Tilmeld dig A-listen <span class="material-symbols-outlined">
                 arrow_forward
                 </span>
             </button>
+            <div class="popup-container">
+                <div class="popup" id="popup-box">
+                    <h2 class="popup-text">Not another newsletter</h2>
+                    <p class="popup-text">9716 har allerede tilmeldt sig, men vi vil også rigtig gerne have dig med.</p>
+                    <input type="email" id="popup-input">
+                    <button id="send">Send</button>
+                </div>
+            </div>
         </section>
 
     </main>
