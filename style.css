@@ -59,6 +59,7 @@ body {
   /* Menu */
 header {
   position: sticky;
+  top: 15px;
   z-index: 9;
   display: flex;
   justify-content: space-between;
@@ -66,6 +67,7 @@ header {
   margin: 40px var(--margin);
   white-space: nowrap;
 }
+
 
 .logo {
   min-width: 80px;
@@ -259,6 +261,21 @@ a.active {
     vertical-align: middle;
   }
 
+
+  /* Scroll animations */
+  .hidden{
+    opacity: 0;
+    filter: blur(50px);
+    transform: translateX(-200px);
+    transition: all 1s ease;
+  }
+  .show{
+    opacity: 1;
+    transform: translateX(0px);
+    filter: blur(0px);
+  }
+
+  /* Mobile responsive */
   @media only screen and (max-width: 600px){
     .eye-catch{
         flex-direction: column;
