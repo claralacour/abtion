@@ -259,7 +259,7 @@ a.active {
     }
     .navlist{
       position: fixed;
-      left: -100%;
+      right: -100%;
       top: 70px;
       gap: 0;
       flex-direction: column;
@@ -268,10 +268,10 @@ a.active {
       transition: 0.3s;
     }
     .navitem{
-      margin: 16px 0;
+      margin: 20px 0;
     }
     .navlist.active{
-      left: 0;
+      right: 0;
     }
 
   }
