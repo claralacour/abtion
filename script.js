@@ -4,7 +4,7 @@ let preload = document.querySelector(".preloader-bg");
 let preloadContainer = document.querySelector(".preloader-text-container");
 let preloadParagraph = document.querySelectorAll(".preloader-text");
 
-//addEventListener lytter efter DOMContentLoaded, for at sikre sig at funktionen kører når DOM er loadet
+//addEventListener lytter efter DOMContentLoaded, for at sikre sig at funktionen kører når hele HTML dokumentet er loadet.
 window.addEventListener("DOMContentLoaded", () => {
   //setTimeout sætter en timer på en funktion, => er en "arrow function", hvilket er et kompakt alternativ til en normal funktion
   setTimeout(() => {
