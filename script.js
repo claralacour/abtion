@@ -31,9 +31,9 @@ window.addEventListener("DOMContentLoaded", () => {
       //Til sidst er der tilføjet en "total duration" på den øverste setTimeout på 2000 millisekunder (2 sekunder), da animationen på teksten skal køre i 2 sekunder.
     }, 2000);
 
-    //preload.style.top = "100vh" fortæller selve baggrundselementet at kører ned fra skærmen. Hvis man ville have den kørte op i stedet, havde man skrevet "-100vh".
+    //preload.style.top = "100%" fortæller selve baggrundselementet at kører ned fra skærmen. Hvis man ville have den kørte op i stedet, havde man skrevet "-100%".
     setTimeout(() => {
-      preload.style.top = "100vh";
+      preload.style.top = "100%";
       //Baggrundsanimationen er sat til at varer 2200 millisekunder (2.2 sekunder).
     }, 2200);
   });
@@ -45,17 +45,16 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 100);
 });
 
-
 //Animate on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-      } else {
-          entry.target.classList.remove('show');
-      }
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
   });
 });
 
-const hiddenElements = document.querySelectorAll('.hidden');
+const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
