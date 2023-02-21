@@ -2,7 +2,7 @@
   --bg-color: #fafafa;
   --primary-color: #0f0f0f;
   --secondary-color: #757575;
-  --margin: clamp(20px, 6vw, 100px);
+  --margin: clamp(20px, 7vw, 100px);
 }
 body {
   font-family: "aktiv-grotesk", sans-serif;
@@ -58,15 +58,18 @@ hr {
 /* Menu */
 header {
   position: sticky;
+  top: 15px;
   z-index: 9;
   display: flex;
   justify-content: space-between;
-  margin: 55px var(--margin);
+  align-items: center;
+  margin: 40px var(--margin);
   white-space: nowrap;
 }
 
 .logo {
-  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
   height: auto;
 }
 
@@ -114,6 +117,10 @@ a.active {
   margin-top: 100px;
 }
 
+.phrase {
+  margin: auto var(--margin);
+}
+
 .text-highlight {
   position: relative;
   overflow: visible;
@@ -144,7 +151,7 @@ a.active {
 }
 
 .case img {
-  max-width: 600px;
+  width: 600px;
 }
 
 .case {
@@ -170,6 +177,9 @@ a.active {
 }
 
 /* References section */
+.cookie-section img {
+  width: clamp(200px, 20vw, 400px);
+}
 
 .reference {
   font-size: 1.5rem;
@@ -225,8 +235,26 @@ footer {
   width: 35vw;
 }
 
-.footer-column h4 {
-  margin-top: 0px;
+footer p {
+  line-height: 1.75rem;
+  color: var(--secondary-color);
+}
+
+footer a {
+  color: var(--secondary-color);
+}
+footer a:hover {
+  color: var(--primary-color);
+}
+
+footer h4 {
+  color: var(--primary-color);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px auto;
 }
 
 .material-symbols-outlined {
@@ -272,4 +300,43 @@ footer {
   opacity: 0;
   transform: translateY(350%);
   transition: all 400ms ease-in-out;
+}
+.footer-column h4 {
+  margin-top: 0px;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+/* Scroll animations */
+.hidden {
+  opacity: 0;
+  filter: blur(50px);
+  transform: translateX(-200px);
+  transition: all 1s ease;
+}
+.show {
+  opacity: 1;
+  transform: translateX(0px);
+  filter: blur(0px);
+}
+
+/* Mobile responsive */
+@media only screen and (max-width: 600px) {
+  .eye-catch {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .front-h1 {
+    margin-left: 0px;
+  }
+
+  .cookie-section {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
 }
