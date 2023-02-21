@@ -73,6 +73,10 @@ header {
   min-width: 80px;
   max-width: 80px;
   height: auto;
+  transition: opacity 250ms ease;
+}
+.logo:hover{
+  opacity: .5;
 }
 
 .navlist {
