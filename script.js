@@ -8,7 +8,7 @@ let preloadParagraph = document.querySelectorAll(".preloader-text");
 window.addEventListener("DOMContentLoaded", () => {
   //setTimeout sætter en timer på en funktion, => er en "arrow function", hvilket er et kompakt alternativ til en normal funktion
   setTimeout(() => {
-    //forEach loader her hver paragraph element, og dens index nummer (0, 1 og 2). Her tilføjer p.classList.add "active" classen fra style.cs.
+    //forEach loader her hver paragraph element, og dens index nummer (0, 1 og 2). Her tilføjer p.classList.add "active" classen fra style.css.
     //(idx + 1) * 140) beskriver at funktionen tager paragraphens index i rækkefølge, og derefter plusser med 1 hvert 140'ende millisekund.
     //Dette gør at hvert paragraph element får "active" classen med 140 millisekunders mellemrum, og giver den ønsket animations-effekt.
     preloadParagraph.forEach((p, idx) => {
@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
       }, (idx + 1) * 140);
     });
 
-    //Denne forEach funktion fjerne "active" classen fra paragraph elementerne, men tilføjer en ny "fade" class.
+    //Denne forEach funktion fjerner "active" classen fra paragraph elementerne, men tilføjer en ny "fade" class.
     //(idx + 1) * 50) beskriver at funktionen tager paragraphens index i rækkefølge, og derefter plusser med 1 hvert 50 millisekunder.
     //Dette gør at hvert paragraph element først mister "active" classen og derefter bliver givet "fade" classen med 50 millisekunders mellemrum
     //Dette får paragraphelementerne til at fade ud igen.
