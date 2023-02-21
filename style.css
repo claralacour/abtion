@@ -213,7 +213,8 @@ a.active {
   }
 
   .popup-container{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -234,11 +235,26 @@ a.active {
     max-width: 100%;
     padding: 30px 50px;
     text-align: center;
+    
+  }
+
+  .shake-animation{
+    animation: shake 200ms ;
+    animation-iteration-count: 3;
   }
 
   .show{
     pointer-events: auto;
     opacity: 1;
+  }
+
+  #popup-input{
+    padding: 15px;
+    border-radius: 100px;
+    border: 1px solid black;
+    margin-right: 20px;
+    width: 200px;
+    margin-bottom: 40px;
   }
 
   /* Footer */
@@ -264,4 +280,19 @@ a.active {
 
   .material-symbols-outlined{
     vertical-align: middle;
+  }
+
+  @keyframes shake{
+    0%{
+      transform: translateX(0rem);
+    }
+    25%{
+      transform: translateX(-1rem);
+    }
+    75%{
+      transform: translateX(1rem);
+    }
+    100%{
+      transform: translateX(0rem);
+    }
   }
