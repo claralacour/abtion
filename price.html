@@ -29,23 +29,39 @@
         </ul>
       </header>
 
-      <main>
-        <form action="#" id="form1">
+      <main id="price-calc">
+        <section class="price-calc-top">
+            <form action="#" id="form1">
             
-            <input type="radio" id="radio-website" name="service"> 
-            <label for="radio-website">Website</label> <br>
+                <div>
+                    <input type="radio" id="radio-website" name="service"> 
+                    <label for="radio-website">Website</label> <br>
+                </div>
+                
+                <div>
+                    <input type="radio" id="radio-app" name="service"> 
+                    <label for="radio-app">App</label> <br>
+                </div>
+                
+    
+                <div>
+                    <input type="radio" id="radio-system" name="service">
+                    <label for="radio-system">System</label>  
+                </div>
+                
+            </form>
 
-            <input type="radio" id="radio-app" name="service"> 
-            <label for="radio-app">App</label> <br>
+            <form action="#" id="form2" style="min-height: 200px;">  
+            </form>
+        </section>
 
-            <input type="radio" id="radio-system" name="service">
-            <label for="radio-system">System</label>
-            
-        </form>
         <hr>
-        <form action="#" id="form2">
-            
-        </form>
+        <div class="form3">
+            <h4>Vejledende pris</h4>
+            <h3 class="text-highlight" id="price-field">10.000 kr</h3>
+            <p class="small-text">Ex. moms</p>
+            <button>Book uforpligtende samtale</button>
+        </div>
 
       </main>
     
