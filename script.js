@@ -27,14 +27,14 @@ function _(x){
 let ba, bi=0, intrvl;
 //bubblegallery - BCA = bubble content array - her findes det andet content
 let bca = [
-  "<img src="jsprojekt/digitalinno.svg" alt="digital innovation grafik"><h2>Digital innovation</h2><p>Vi guider dig igennem det ukendte og hjælper dig med at se, hvordan du skal udvikle dig for at forblive relevant i dine kunders øje.</p>"
-    "<img src="jsprojekt/uxui.svg" alt="UX/UI grafik"><h2>UX/UI</h2><p>Den der leverer den bedste brugeroplevelse, er den der vinder kunderne og deres loyalitet. Derfor er brugeren centrum for alt hvad vi laver.</p>"
-    "<img src="jsprojekt/websites.svg" alt="Laptop grafik"><h2>Websites</h2><p>Vi designer og udvikler websites til alle tænkelige formål. Websites der ikke bare er brugervenlige, men også venlige ved dem der skal arbejde med indholdet i backend. Websites der er billige at vedligeholde og som holder i mange år.</p>"
-    "<img src="jsprojekt/mobileapps.svg" alt="Mobil grafik"><h2>UX/UI</h2><p>Vi har udviklet apps lige siden Apples App Store var en lille dreng med græs på knæene, og i al beskedenhed er det noget af det vores multidisciplinære team af programmører, designere og forretningskonsulenter er ret gode til.</p>"
-    "<img src="jsprojekt/platforme.svg" alt="Platform grafik"><h2>Platforme og systemer</h2><p>Selvbetjeningsløsninger, tilbudsystemer, administration og logistik. Når du ikke kan finde en hyldevare til dit behov, er det her du skal kigge. Vi er i sær gode til at udvikle løsninger der gør manuelle opgaver lettere, eller får dem til at forsvinde helt.</p>"
-    "<img src="jsprojekt/integrationer.svg" alt="Integrationer grafik"><h2>Integrationer</h2><p>Når du har brug for at få forbundet et system med et andet, så dine data kan flyde frit og ubesværet i mellem dem. Slut med copy/paste. Slut med tastefejl. Slut med ventetid. Slut med at data er ude af sync. Alt kan integreres.</p>"
+  '<img src="jsprojekt/digitalinno.svg" alt="digital innovation grafik"><h2>Digital innovation</h2><p>Vi guider dig igennem det ukendte og hjælper dig med at se, hvordan du skal udvikle dig for at forblive relevant i dine kunders øje.</p>',
+    '<img src="jsprojekt/uxui.svg" alt="UX/UI grafik"><h2>UX/UI</h2><p>Den der leverer den bedste brugeroplevelse, er den der vinder kunderne og deres loyalitet. Derfor er brugeren centrum for alt hvad vi laver.</p>',
+    '<img src="jsprojekt/websites.svg" alt="Laptop grafik"><h2>Websites</h2><p>Vi designer og udvikler websites til alle tænkelige formål. Websites der ikke bare er brugervenlige, men også venlige ved dem der skal arbejde med indholdet i backend. Websites der er billige at vedligeholde og som holder i mange år.</p>',
+    '<img src="jsprojekt/mobileapps.svg" alt="Mobil grafik"><h2>UX/UI</h2><p>Vi har udviklet apps lige siden Apples App Store var en lille dreng med græs på knæene, og i al beskedenhed er det noget af det vores multidisciplinære team af programmører, designere og forretningskonsulenter er ret gode til.</p>',
+    '<img src="jsprojekt/platforme.svg" alt="Platform grafik"><h2>Platforme og systemer</h2><p>Selvbetjeningsløsninger, tilbudsystemer, administration og logistik. Når du ikke kan finde en hyldevare til dit behov, er det her du skal kigge. Vi er i sær gode til at udvikle løsninger der gør manuelle opgaver lettere, eller får dem til at forsvinde helt.</p>',
+    '<img src="jsprojekt/integrationer.svg" alt="Integrationer grafik"><h2>Integrationer</h2><p>Når du har brug for at få forbundet et system med et andet, så dine data kan flyde frit og ubesværet i mellem dem. Slut med copy/paste. Slut med tastefejl. Slut med ventetid. Slut med at data er ude af sync. Alt kan integreres.</p>'
 ];
-//denne her funktion bliver triggeret af funktionen under
+//denne her funktion bliver triggeret af funktionen under 
 function bubbles(bi){
   //det her fader vores content mellem siderne
   _("bubblecontent").style.opacity = 0;
@@ -60,7 +60,7 @@ function bubbleSlide(){
 }
 window.addEventListener("load", function(){
   ba = _("bubbles").children;
-  intrvl = setInterval(bubbleSlide, 5000ms);
+  intrvl = setInterval(bubbleSlide, 5000);
 });
 
 
