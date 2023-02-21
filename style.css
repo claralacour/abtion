@@ -232,7 +232,7 @@ a.active {
     color: var(--secondary-color);
   }
   
-  /*burger menu css*/
+  /*burger menu*/
   .burgermenu{
     display: none;
     cursor: pointer;
@@ -246,6 +246,44 @@ a.active {
     transition: all 0.3s ease-in-out;
     background-color: #0f0f0f;
   }
+
+  /*bubble galleri*/
+#bubblebox{
+    width: 650px;
+    height: 30rem;
+    margin: var(--margin);
+    background-color: rgb(245,245,245);
+    padding: 3rem;
+}
+#bubbles{
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+#bubbles > div{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 24px 10px 0px 10px;
+    background: rgba(0, 0, 0, .1);
+    text-align: center;
+    border: 2px solid var(--secondary-color);
+    border-radius: 100%;
+    font-size: 17px;
+    text-decoration: none;
+    transition: background 0.3s linear 0s;
+    cursor: pointer;
+  }
+  #bubblecontent{
+    margin: 0 auto;
+    transition: 0.3s linear 0s;
+  }
+  #bubblecontent > img{
+    height: 250px;
+  }
+
+
+
 
   @media(max-width:768px){
     .burgermenu{
