@@ -321,7 +321,7 @@ footer h4 {
   transform: translateX(-200px);
   transition: all 1s ease;
 }
-.show {
+.show2 {
   opacity: 1;
   transform: translateX(0px);
   filter: blur(0px);
@@ -621,21 +621,6 @@ footer h4 {
   .material-symbols-outlined{
     vertical-align: middle;
   }
-
-
-  /* Scroll animations */
-  .hidden{
-    opacity: 0;
-    filter: blur(50px);
-    transform: translateX(-200px);
-    transition: all 1s ease;
-  }
-  .show{
-    opacity: 1;
-    transform: translateX(0px);
-    filter: blur(0px);
-  }
-
 
   /* Price calculator */
   #price-calc{

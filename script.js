@@ -39,13 +39,6 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//Sticky header til navbar
-const header = document.querySelector("header");
-window.addEventListener("scroll", function () {
-  header.classList.toggle("sticky", window.scrollY > 100);
-});
-
-
 //js til burgermenu
 const burgermenu = document.querySelector(".burgermenu");
 const navList = document.querySelector(".navlist");
@@ -109,9 +102,9 @@ window.addEventListener("load", function(){
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+      entry.target.classList.add("show2");
     } else {
-      entry.target.classList.remove("show");
+      entry.target.classList.remove("show2");
     }
   });
 });
@@ -199,6 +192,7 @@ let emailList = ['example@mail.com','example2@mail.com','example3@mail.com'];
 openForm.addEventListener('click', () => {
   popupContainer.classList.add('show');
   boxOpen = true;
+  console.log("whatever")
 });
 
 //Send den indtastede e-mail ved klik på 'send'
