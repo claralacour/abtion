@@ -549,7 +549,7 @@ footer h4 {
     border-radius: 100%;
     font-size: 17px;
     text-decoration: none;
-    transition: background 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
     cursor: pointer;
   }
   #bubblecontent{
@@ -632,8 +632,6 @@ footer h4 {
   #price-calc h4{
     margin-top: 70px;
   }
-
-
 
   .highlighted-text{
     border: var(--primary-color) solid 2px;
