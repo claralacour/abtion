@@ -20,14 +20,17 @@
   <body>
     <!--Header section-->
     <header>
-      <a href="#"><img class="logo" src="img/logo.svg" alt="abtion" /></a>
-
-      <ul class="navlist">
-        <li><a href="#about">Cases</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Om os</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
+        <a href="#"><img class="logo" src="img/logo.svg" alt="abtion"></a>
+        <ul class="navlist">
+            <li class="navitem"><a href="#about" class="nav-link">Cases</a></li>
+            <li class="navitem"><a href="#services" class="nav-link">Services</a></li>
+            <li class="navitem"><a href="#portfolio" class="nav-link">Om os</a></li>
+            <li class="navitem"><a href="#contact" class="nav-link">Kontakt</a></li>
+        </ul>
+        <div class="burgermenu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div>
     </header>
   </body>
 
@@ -134,6 +137,26 @@
             </div>
         </section>
         
+        
+<!-- Bobbel galleri med services er her-->
+        <section class="hidden">
+            <div id="bubblebox">
+                <div id="bubbles">
+                    <div onclick="bubbles(0); clearInterval(intrvl);" style="background: #2EEF92;"></div>
+                    <div onclick="bubbles(1); clearInterval(intrvl);"></div>
+                    <div onclick="bubbles(2); clearInterval(intrvl);"></div>
+                    <div onclick="bubbles(3); clearInterval(intrvl);"></div>
+                    <div onclick="bubbles(4); clearInterval(intrvl);"></div>
+                    <div onclick="bubbles(5); clearInterval(intrvl);"></div>
+                </div>
+                <div id="bubblecontent">
+                    <img src="jsprojekt/digitalinno.svg" alt="digital innovation grafik">
+                    <h2>Digital innovation</h2>
+                    <p>Vi guider dig igennem det ukendte og hjælper dig med at se, hvordan du skal udvikle dig for at forblive relevant i dine kunders øje.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="margin">
             <hr>
             <p class="small-text">Referencer</p>
