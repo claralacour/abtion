@@ -453,6 +453,51 @@ footer h4 {
     cursor: pointer;
   }
 
+  .popup-container{
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .popup{
+    background-color: white;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    text-align: center;
+    
+  }
+
+  .shake-animation{
+    animation: shake 200ms ;
+    animation-iteration-count: 3;
+  }
+
+  .show{
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  #popup-input{
+    padding: 15px;
+    border-radius: 100px;
+    border: 1px solid black;
+    margin-right: 20px;
+    width: 200px;
+    margin-bottom: 40px;
+  }
+
   /* Footer */
 
   footer{
@@ -743,5 +788,19 @@ footer h4 {
   @media only screen and (max-width: 900px){
     .price-calc-top{
       flex-direction: column;
+    }
+  }
+  @keyframes shake{
+    0%{
+      transform: translateX(0rem);
+    }
+    25%{
+      transform: translateX(-1rem);
+    }
+    75%{
+      transform: translateX(1rem);
+    }
+    100%{
+      transform: translateX(0rem);
     }
   }
