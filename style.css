@@ -318,6 +318,8 @@ a.active {
     }
     100%{
       transform: translateX(0rem);
+    }
+  }
 
   /* Scroll animations */
   .hidden{
