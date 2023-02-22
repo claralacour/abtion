@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abtion</title>
+    <link rel="icon" type="image/x-icon" href="img/fav.png">
+
 
     <link rel="stylesheet" href="style.css" />
 
@@ -18,12 +20,22 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <!--Preloader section-->
+    <div class="preloader">
+        <div class="preloader-bg">
+            <div class="preloader-text-container">
+            <p class="preloader-text">Digital innovation,</p>
+            <p class="preloader-text">design,</p>
+            <p class="preloader-text">udvkling.</p>
+            </div>
+        </div>
+    </div>
     <!--Header section-->
     <header>
         <a href="#"><img class="logo" src="img/logo.svg" alt="abtion"></a>
         <ul class="navlist">
             <li class="navitem"><a href="#about" class="nav-link">Cases</a></li>
-            <li class="navitem"><a href="#services" class="nav-link">Services</a></li>
+            <li class="navitem"><a href="price.html" class="nav-link">Services</a></li>
             <li class="navitem"><a href="#portfolio" class="nav-link">Om os</a></li>
             <li class="navitem"><a href="#contact" class="nav-link">Kontakt</a></li>
         </ul>
@@ -32,7 +44,6 @@
           <span class="bar"></span>
       </div>
     </header>
-  </body>
 
     <main>
         <section class="eye-catch margin hidden">
@@ -61,9 +72,29 @@
             </div>
         </section>
 
-        <section class="phrase">
-            <h2 class="front-h2 hidden">Vi har specialiseret os i at designe, udvikle og forbinde <span class="text-highlight">digitale produkter</span> til oplevelser der giver glade brugere.</h2>
+        <!-- Bobbel galleri med services er her-->
+        <section class="gallery hidden2">
+            <div id="bubblebox">
+                <div id="bubblecontent">
+                    <img src="jsprojekt/digitalinno.svg" alt="digital innovation grafik" class="gallery-img">
+                    <h2 class="front-h2">Digital innovation</h2>
+                    <p>Vi guider dig igennem det ukendte og hjælper dig med at se, hvordan du skal udvikle dig for at forblive relevant i dine kunders øje.</p>
+                </div>
+                <div id="bubbles">
+                    <div onclick="bubbles(0); clearInterval(intrvl);" style="background: #2EEF92;"></div>
+                    <div onclick="bubbles(1); clearInterval(intrvl);"></div>
+                    <div onclick="bubbles(2); clearInterval(intrvl);"></div>
+                    <div onclick="bubbles(3); clearInterval(intrvl);"></div>
+                    <div onclick="bubbles(4); clearInterval(intrvl);"></div>
+                    <div onclick="bubbles(5); clearInterval(intrvl);"></div>
+                </div>
+            </div>
+            <h2 class="front-h2 hidden2">Vi har specialiseret os i at designe, udvikle og forbinde <span class="text-highlight">digitale produkter</span> til oplevelser der giver glade brugere.</h2>
         </section>
+
+        <!-- <section class="phrase">
+            
+        </section> -->
 
         <section class="margin">
             <hr>
@@ -71,7 +102,7 @@
         </section>
 
         <section class="cases">
-            <div class="case hidden">
+            <div class="case hidden2">
                 <img src="img/case1.png" alt="">
                 <hr class="case-hr">
                 <h3>Deloitte</h3>
@@ -79,7 +110,7 @@
                     arrow_forward
                     </span></a>
             </div>
-            <div class="case hidden">
+            <div class="case hidden2">
                 <img src="img/case2.png" alt="">
                 <hr class="case-hr">
                 <h3>Region Hovedstaden</h3>
@@ -87,7 +118,7 @@
                 arrow_forward
                 </span></a>
             </div>
-            <div class="case hidden">
+            <div class="case hidden2">
                 <img src="img/case3.png" alt="">
                 <hr class="case-hr">
                 <h3>Salling C Optik</h3>
@@ -95,7 +126,7 @@
                 arrow_forward
                 </span></a>
             </div>
-            <div class="case hidden">
+            <div class="case hidden2">
                 <img src="img/case4.png" alt="">
                 <hr class="case-hr">
                 <h3>Byens.as</h3>
@@ -103,7 +134,7 @@
                 arrow_forward
                 </span></a>
             </div>
-            <div class="case hidden">
+            <div class="case hidden2">
                 <img src="img/case5.png" alt="">
                 <hr class="case-hr">
                 <h3>CBS</h3>
@@ -111,7 +142,7 @@
                 arrow_forward
                 </span></a>
             </div>
-            <div class="case hidden">
+            <div class="case hidden2">
                 <img src="img/case6.png" alt="">
                 <hr class="case-hr">
                 <h3>Novo Nordisk Pharmatech</h3>
@@ -119,7 +150,7 @@
                 arrow_forward
                 </span></a>
             </div>
-            <div class="case hidden">
+            <div class="case hidden2">
                 <img src="img/case7.png" alt="">
                 <hr class="case-hr">
                 <h3>Ejner Hessel</h3>
@@ -138,24 +169,6 @@
         </section>
         
         
-<!-- Bobbel galleri med services er her-->
-        <section class="hidden">
-            <div id="bubblebox">
-                <div id="bubbles">
-                    <div onclick="bubbles(0); clearInterval(intrvl);" style="background: #2EEF92;"></div>
-                    <div onclick="bubbles(1); clearInterval(intrvl);"></div>
-                    <div onclick="bubbles(2); clearInterval(intrvl);"></div>
-                    <div onclick="bubbles(3); clearInterval(intrvl);"></div>
-                    <div onclick="bubbles(4); clearInterval(intrvl);"></div>
-                    <div onclick="bubbles(5); clearInterval(intrvl);"></div>
-                </div>
-                <div id="bubblecontent">
-                    <img src="jsprojekt/digitalinno.svg" alt="digital innovation grafik">
-                    <h2>Digital innovation</h2>
-                    <p>Vi guider dig igennem det ukendte og hjælper dig med at se, hvordan du skal udvikle dig for at forblive relevant i dine kunders øje.</p>
-                </div>
-            </div>
-        </section>
 
         <section class="margin">
             <hr>
@@ -191,10 +204,20 @@
 
         <section class="newsletter">
             <h3>9.716 har allerede tilmeldt sig vores email-liste.</h3>
-            <button>Tilmeld dig A-listen <span class="material-symbols-outlined">
+            <button id="open">Tilmeld dig A-listen <span class="material-symbols-outlined">
                 arrow_forward
                 </span>
             </button>
+            <div class="popup-container">
+                <div class="popup" id="popup-box">
+                    <h2 class="popup-text">Not another newsletter</h2>
+                    <p class="popup-text">9.716 har allerede tilmeldt sig, men vi vil også rigtig gerne have dig med.</p>
+                    <input type="email" placeholder="mail@mail.com" id="popup-input">
+                    <button id="send">Tilmeld mig <span class="material-symbols-outlined">
+                        arrow_forward</span>
+                    </button>
+                </div>
+            </div>
         </section>
 
     </main>
