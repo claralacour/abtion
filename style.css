@@ -2,7 +2,7 @@
   --bg-color: #fafafa;
   --primary-color: #0f0f0f;
   --secondary-color: #757575;
-  --margin: clamp(20px, 7vw, 100px);
+  --margin: clamp(20px, 14vw, 270px);
 }
 body {
   font-family: "aktiv-grotesk", sans-serif;
@@ -94,10 +94,16 @@ a.active {
 }
 
 /* Main */
-.front-h2 {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1020px;
+.gallery{
+  display: flex;
+  margin: var(--margin);
+  gap: 50px;
+  align-items: center;
+}
+.front-h2{
+  font-size: clamp(2rem, 3vw, 4rem);
+  line-height: normal;
+  margin: 20px 0px;
 }
 
 .margin {
@@ -112,9 +118,6 @@ a.active {
 
 .front-h1 {
   margin-left: 15vw;
-}
-.front-h2 {
-  margin: 200px auto;
 }
 
 .fullwidth-video-container {
@@ -321,6 +324,11 @@ footer h4 {
   transform: translateX(-200px);
   transition: all 1s ease;
 }
+.hidden2 {
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: all 1s ease;
+}
 .show2 {
   opacity: 1;
   transform: translateX(0px);
@@ -345,10 +353,6 @@ footer h4 {
     flex-direction: column;
   }
 }
-  .front-h2{
-    margin: 200px auto;
-  }
-
   .fullwidth-video-container{
     margin-top: 100px;
   }
@@ -527,16 +531,17 @@ footer h4 {
 
   /*bubble galleri*/
 #bubblebox{
-    width: 650px;
-    height: 30rem;
-    margin: var(--margin);
+    height: auto;
     background-color: rgb(245,245,245);
     padding: 3rem;
+    width: 100vw;
+    flex-shrink: 1;
 }
 #bubbles{
     width: auto;
     margin: 0 auto;
     text-align: center;
+    white-space: nowrap;
 }
 #bubbles > div{
     display: inline-block;
@@ -574,20 +579,30 @@ footer h4 {
       transform: translateY(-4px) rotate(-45deg);
     }
     .navlist{
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: fixed;
-      right: -100%;
-      top: 70px;
+      right: -120%;
+      top: 0px;
+      margin: 0;
+      height: 100%;
+      opacity: 0%;
       gap: 0;
       flex-direction: column;
       width: 100%;
       text-align: center;
-      transition: 0.3s;
+      transition: opacity 0.3s ease-in-out;
+      background-color: #ffffff1a;
+      backdrop-filter: blur(20px);
     }
     .navitem{
       margin: 20px 0;
     }
     .navlist.active{
       right: 0;
+      opacity: 100%;
+      transition: opacity 0.3s ease;
     }
 
   }
@@ -771,6 +786,14 @@ footer h4 {
   @media only screen and (max-width: 900px){
     .price-calc-top{
       flex-direction: column;
+    }
+  }
+  @media only screen and (max-width: 1300px){
+    .gallery{
+      flex-direction: column;
+    }
+    #bubblebox{
+      width: auto;
     }
   }
   @keyframes shake{

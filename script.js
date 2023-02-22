@@ -61,12 +61,12 @@ function _(x){
 let ba, bi=0, intrvl;
 //bubblegallery - BCA = bubble content array - her findes det andet content
 let bca = [
-  '<img src="jsprojekt/digitalinno.svg" alt="digital innovation grafik"><h2>Digital innovation</h2><p>Vi guider dig igennem det ukendte og hjælper dig med at se, hvordan du skal udvikle dig for at forblive relevant i dine kunders øje.</p>',
-    '<img src="jsprojekt/uxui.svg" alt="UX/UI grafik"><h2>UX/UI</h2><p>Den der leverer den bedste brugeroplevelse, er den der vinder kunderne og deres loyalitet. Derfor er brugeren centrum for alt hvad vi laver.</p>',
-    '<img src="jsprojekt/websites.svg" alt="Laptop grafik"><h2>Websites</h2><p>Vi designer og udvikler websites til alle tænkelige formål. Websites der ikke bare er brugervenlige, men også venlige ved dem der skal arbejde med indholdet i backend. Websites der er billige at vedligeholde og som holder i mange år.</p>',
-    '<img src="jsprojekt/mobileapps.svg" alt="Mobil grafik"><h2>UX/UI</h2><p>Vi har udviklet apps lige siden Apples App Store var en lille dreng med græs på knæene, og i al beskedenhed er det noget af det vores multidisciplinære team af programmører, designere og forretningskonsulenter er ret gode til.</p>',
-    '<img src="jsprojekt/platforme.svg" alt="Platform grafik"><h2>Platforme og systemer</h2><p>Selvbetjeningsløsninger, tilbudsystemer, administration og logistik. Når du ikke kan finde en hyldevare til dit behov, er det her du skal kigge. Vi er i sær gode til at udvikle løsninger der gør manuelle opgaver lettere, eller får dem til at forsvinde helt.</p>',
-    '<img src="jsprojekt/integrationer.svg" alt="Integrationer grafik"><h2>Integrationer</h2><p>Når du har brug for at få forbundet et system med et andet, så dine data kan flyde frit og ubesværet i mellem dem. Slut med copy/paste. Slut med tastefejl. Slut med ventetid. Slut med at data er ude af sync. Alt kan integreres.</p>'
+  '<img src="jsprojekt/digitalinno.svg" alt="digital innovation grafik" class="gallery-img"><h2 class="front-h2">Digital innovation</h2><p>Vi guider dig igennem det ukendte og hjælper dig med at se, hvordan du skal udvikle dig for at forblive relevant i dine kunders øje.</p>',
+    '<img src="jsprojekt/uxui.svg" alt="UX/UI grafik" class="gallery-img"><h2 class="front-h2">UX/UI</h2><p>Den der leverer den bedste brugeroplevelse, er den der vinder kunderne og deres loyalitet. Derfor er brugeren centrum for alt hvad vi laver.</p>',
+    '<img src="jsprojekt/websites.svg" alt="Laptop grafik" class="gallery-img"><h2 class="front-h2">Websites</h2><p>Vi designer og udvikler websites til alle tænkelige formål. Websites der ikke bare er brugervenlige, men også venlige ved dem der skal arbejde med indholdet i backend. Websites der er billige at vedligeholde og som holder i mange år.</p>',
+    '<img src="jsprojekt/mobileapps.svg" alt="Mobil grafik" class="gallery-img"><h2 class="front-h2">UX/UI</h2><p>Vi har udviklet apps lige siden Apples App Store var en lille dreng med græs på knæene, og i al beskedenhed er det noget af det vores multidisciplinære team af programmører, designere og forretningskonsulenter er ret gode til.</p>',
+    '<img src="jsprojekt/platforme.svg" alt="Platform grafik" class="gallery-img"><h2 class="front-h2">Platforme og systemer</h2><p>Selvbetjeningsløsninger, tilbudsystemer, administration og logistik. Når du ikke kan finde en hyldevare til dit behov, er det her du skal kigge. Vi er i sær gode til at udvikle løsninger der gør manuelle opgaver lettere, eller får dem til at forsvinde helt.</p>',
+    '<img src="jsprojekt/integrationer.svg" alt="Integrationer grafik" class="gallery-img"><h2 class="front-h2">Integrationer</h2><p>Når du har brug for at få forbundet et system med et andet, så dine data kan flyde frit og ubesværet i mellem dem. Slut med copy/paste. Slut med tastefejl. Slut med ventetid. Slut med at data er ude af sync. Alt kan integreres.</p>'
 ];
 //denne her funktion bliver triggeret af funktionen under 
 function bubbles(bi){
@@ -112,72 +112,13 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
+const hiddenElements2 = document.querySelectorAll(".hidden2");
+hiddenElements2.forEach((el) => observer.observe(el));
 
-// Price calculator
 
-const form1 = document.getElementById("form1");
-const form2 = document.getElementById("form2");
 
-const radioWebsite = document.getElementById("radio-website");
-const radioApp = document.getElementById("radio-app");
-const radioSystem = document.getElementById("radio-system");
-let form2Array;
 
-let price = 0;
-const priceField = document.getElementById("price-field");
-
-form1.addEventListener("change", function(){
-  if (radioWebsite.checked){
-    form2.innerHTML = "";
-    form2Array = ["new-website|Opbygning af ny website|100|option", "webshop|Webshop til eksisterende hjemmeside|200|option", "redesign-website|Redesign af eksisterende website|50|option", "maintain-website|Vedligeholdelse|50|option"];
-  } else if (radioApp.checked){
-    form2.innerHTML = ""
-    form2Array = ["simple-app|Udvikling af simpel app", "advanced-app|Udvikling af app med flere eller avancerede funktioner", "app-update|Opdatering/ forbedring af eksisterende app", "ui|Design af UI/UX"];
-  } else if (radioSystem.checked){
-    form2.innerHTML = ""
-    form2Array = ["system|Udvikling af mindre internt system (Fx til lager og ordrehåndtering)", "advanced-system|Udvikling af komplekse systemer med integrering i nuværende systemer"];
-  } 
-
-  for (let i in form2Array){
-    let pair = form2Array[i].split("|");
-    let newCheckbox = document.createElement("input");
-    newCheckbox.type = "checkbox";
-    newCheckbox.id = pair[0];
-    newCheckbox.innerHTML = pair[1];
-    newCheckbox.value = pair[2];
-    newCheckbox.classList.add(pair[3]);
-    let label = document.createElement("label");
-    label.htmlFor = pair[0];
-    label.innerHTML = pair[1] + "<br>";
-    
-    let container = document.createElement("div");
-    container.appendChild(newCheckbox);
-    container.appendChild(label);
-
-    form2.appendChild(container);
-  }
-});
-
-function calcPrice() {
-  let price = 0;
-  let option = document.querySelectorAll(".option");
-
-  for (let i in form2Array){
-    if (option[i].checked){
-      let itemPrice = Number(option[i].value);
-      price = Number(price);
-      price += itemPrice * 1000;
-    }
-  }
-  price = price.toLocaleString("de-DE");
-  priceField.innerHTML = price + " kr.";
-}
-
-form2.addEventListener("change", function() {
-  calcPrice();
-})
 //------------------------------Newsletter---------------------------------------
-
 //Variabler
 const openForm = document.getElementById('open');
 const popupContainer = document.querySelector('.popup-container');
@@ -188,50 +129,55 @@ const popUpInput = document.getElementById("popup-input");
 let boxOpen = false;
 let emailList = ['example@mail.com','example2@mail.com','example3@mail.com'];
 
+
 //Åben popup-vindue ved klik på tilmeld-knappen
 openForm.addEventListener('click', () => {
-  popupContainer.classList.add('show');
-  boxOpen = true;
-  console.log("whatever")
+ popupContainer.classList.add('show');
+ boxOpen = true;
+ console.log("hej")
 });
+
 
 //Send den indtastede e-mail ved klik på 'send'
 send.addEventListener('click', () => {
-  let newEmail = popUpInput.value;
-  validation(newEmail);
+ let newEmail = popUpInput.value;
+ validation(newEmail);
 });
+
 
 //Luk vindue ved klik udenfor popup-vinduet og fjern indtastede inputs fra før
 popupContainer.addEventListener('click', (e) =>{
-  if (e.target == popUpBox || e.target == send || e.target == popUpText || e.target == popUpInput){
-  } else if (boxOpen == true) {
-    popupContainer.classList.remove('show');
-    popUpInput.value = "";
-    popUpInput.style.backgroundColor = "#ffffff";
-  } else {
-    return;
-  }
+ if (e.target == popUpBox || e.target == send || e.target == popUpText || e.target == popUpInput){
+ } else if (boxOpen == true) {
+   popupContainer.classList.remove('show');
+   popUpInput.value = "";
+   popUpInput.style.backgroundColor = "#ffffff";
+ } else {
+   return;
+ }
 });
+
 
 //Tjek om e-mail er valid og shake-effekt ved ikke-valid e-mail
 function validation(email){
-  let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  if (email.match(pattern)){
-    console.log("Match");
-    emailList.push(email);
-    console.log(emailList);
-    popupContainer.classList.remove('show');
-    popUpInput.value = "";
-    boxOpen = false;
-  }
-  else{
-    console.log("Fejl");
-    popUpBox.classList.add("shake-animation");
-  }
+ let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+ if (email.match(pattern)){
+   console.log("Match");
+   emailList.push(email);
+   console.log(emailList);
+   popupContainer.classList.remove('show');
+   popUpInput.value = "";
+   boxOpen = false;
+ }
+ else{
+   console.log("Fejl");
+   popUpBox.classList.add("shake-animation");
+ }
 }
+
 
 //Fjern rød border ved klik
 popUpInput.addEventListener('click', () => {
-  popUpBox.classList.remove('shake-animation');
-  popUpInput.style.backgroundColor = "#ffffff";
+ popUpBox.classList.remove('shake-animation');
+ popUpInput.style.backgroundColor = "#ffffff";
 })
