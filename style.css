@@ -71,6 +71,10 @@ header {
   min-width: 80px;
   max-width: 80px;
   height: auto;
+  transition: opacity 250ms ease;
+}
+.logo:hover{
+  opacity: .5;
 }
 
 .navlist {
@@ -341,3 +345,320 @@ footer h4 {
     flex-direction: column;
   }
 }
+  .front-h2{
+    margin: 200px auto;
+  }
+
+  .fullwidth-video-container{
+    margin-top: 100px;
+  }
+
+  .phrase{
+    margin: auto var(--margin);
+  }
+
+  .text-highlight{
+    position: relative;
+    overflow: visible;
+    background-image: url("https://assets.website-files.com/621338266dc3cc6927475ff2/631ef8d7f8bd96260c4c6301_Vector2.svg");
+    background-position: 0% 0%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    white-space: nowrap;
+  }
+
+  /* Case section */
+  .cases{
+    margin: auto var(--margin);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .case-hr{
+    margin-top: 20px;
+    width: auto;
+  }
+
+  .case-link{
+    font-size: 0.875rem;
+    margin: 0px;
+  }
+
+  .case img{
+    width: 600px;
+  }
+
+  .case{
+    margin-bottom: 75px;
+  }
+
+
+
+  /* Cookie section */
+  .cookie-section{
+    margin: 175px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 100px;
+  }
+
+  .cookie-section img{
+    width: clamp(200px, 20vw, 400px);
+  }
+
+  .cookie-content{
+    max-width: 500px;
+  }
+
+  /* References section */
+
+  .reference{
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .reference-flex{
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reference-container{
+    width: 48%;
+  }
+
+  /* Newsletter */
+  .newsletter{
+    margin-top: 175px;
+    padding: 100px;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+
+  button{
+    margin-top: 30px;
+    border-radius: 100px;
+    padding: 15px 40px;
+    background-color: var(--primary-color);
+    border: none;
+    color: #dddddd;
+    transition: background-color 0.25s ease;
+  }
+  button:hover{
+    background-color: var(--secondary-color);
+    cursor: pointer;
+  }
+
+  /* Footer */
+
+  footer{
+    background-color: #f5f5f5;
+    padding: var(--margin);
+  }
+
+  footer p{
+    line-height: 1.75rem;
+    color: var(--secondary-color);
+  }
+
+  footer a{
+    color: var(--secondary-color);
+  }
+  footer a:hover{
+    color: var(--primary-color);
+  }
+
+  footer h4{
+    color: var(--primary-color);
+  }
+
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+  }
+
+  .footer-column:first-child{
+    width: 35vw;
+  }
+
+  .footer-column h4{
+    margin-top: 0px;
+  }
+
+  .material-symbols-outlined{
+    vertical-align: middle;
+  }
+
+
+  /* Scroll animations */
+  .hidden{
+    opacity: 0;
+    filter: blur(50px);
+    transform: translateX(-200px);
+    transition: all 1s ease;
+  }
+  .show{
+    opacity: 1;
+    transform: translateX(0px);
+    filter: blur(0px);
+  }
+
+
+  /* Price calculator */
+  #price-calc{
+    margin: var(--margin);
+  }
+  #price-calc h2{
+    margin-bottom: 70px;
+  }
+  #price-calc h4{
+    margin-top: 70px;
+  }
+
+
+
+  .highlighted-text{
+    border: var(--primary-color) solid 2px;
+    border-radius: 100px;
+    padding: 15px 40px;
+    display: inline-block;
+  }
+
+  .form3{
+    text-align: center;
+  }
+
+  .form3 button{
+    margin-top: 0px;
+    font-size: 1rem;
+  }
+
+  #form1, #form2{
+    padding: 25px;
+    min-height: 200px;
+  }
+
+  .price-calc-top{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .price-calc-top form{
+    min-width: 38vw;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+
+  /* Checkboxes */
+  [type="checkbox"]{
+    opacity: 0;
+  }
+  [type="checkbox"] + label{
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: inline-block;
+    color: #757575;
+    line-height: 25px;
+  }
+  [type="checkbox"] + label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    outline: 2px solid #2cef91;
+  }
+  [type="checkbox"]:checked + label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background-color: #2cef91;
+  }
+  [type="checkbox"]:checked + label::after{
+    content: "L";
+    position: absolute;
+    font-weight: 900;
+    color: #f5f5f5;
+    left: 4px;
+    top: -5px;
+    transform: scaleX(-100%) rotate(-45deg);
+  }
+
+  [type="radio"]{
+    opacity: 0;
+  }
+  [type="radio"] + label{
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: inline-block;
+    color: #757575;
+    line-height: 25px;
+  }
+  [type="radio"] + label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    outline: 2px solid #2cef91;
+  }
+  [type="radio"]:checked + label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background-color: #2cef91;
+  }
+  [type="radio"]:checked + label::after{
+    content: "L";
+    position: absolute;
+    font-weight: 900;
+    color: #f5f5f5;
+    left: 4px;
+    top: -5px;
+    transform: scaleX(-100%) rotate(-45deg);
+  }
+
+
+  /* Mobile responsive */
+  @media only screen and (max-width: 600px){
+    .eye-catch{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .front-h1{
+        margin-left: 0px;
+      }
+
+    .cookie-section{
+        flex-direction: column;
+    }
+
+    .footer-container{
+        flex-direction: column;
+    }
+  }
+
+  @media only screen and (max-width: 900px){
+    .price-calc-top{
+      flex-direction: column;
+    }
+  }
