@@ -2,7 +2,7 @@
   --bg-color: #fafafa;
   --primary-color: #0f0f0f;
   --secondary-color: #757575;
-  --margin: clamp(20px, 14vw, 270px);
+  --margin: clamp(20px, 10vw, 270px);
 }
 body {
   font-family: "aktiv-grotesk", sans-serif;
@@ -159,7 +159,7 @@ a.active {
 
 .case{
   margin-bottom: 75px;
-  width: clamp(200px, 35vw, 600px);
+  width: clamp(200px, 38vw, 600px);
 }
 
 /* Cookie section */
@@ -532,7 +532,7 @@ footer h4 {
     background-color: rgb(245,245,245);
     padding: 3rem;
     width: 100vw;
-    flex-shrink: 1;
+    flex-shrink: 0.8;
 }
 #bubbles{
     width: auto;
@@ -641,7 +641,7 @@ footer h4 {
 
   /* Price calculator */
   #price-calc{
-    margin: var(--margin);
+    margin: 100px var(--margin);
   }
   #price-calc h2{
     margin-bottom: 70px;
@@ -795,6 +795,10 @@ footer h4 {
     .price-calc-top{
       flex-direction: column;
     }
+
+  .price-calc-top form{
+    width: auto;
+  }
   }
   @media only screen and (max-width: 1300px){
     .gallery{

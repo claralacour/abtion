@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Abtion</title>
+        <link rel="icon" type="image/x-icon" href="img/fav.png">
     
         <link rel="stylesheet" href="style.css" />
     
@@ -19,16 +20,29 @@
         <script src="price.js" defer></script>
       </head>
 <body>
+    <div class="preloader">
+        <div class="preloader-bg">
+            <div class="preloader-text-container">
+            <p class="preloader-text">Digital innovation,</p>
+            <p class="preloader-text">design,</p>
+            <p class="preloader-text">udvkling.</p>
+            </div>
+        </div>
+    </div>
+    <!--Header section-->
     <header>
-        <a href="#"><img class="logo" src="img/logo.svg" alt="abtion" /></a>
-  
+        <a href="index.html"><img class="logo" src="img/logo.svg" alt="abtion"></a>
         <ul class="navlist">
-          <li><a href="#about">Cases</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Om os</a></li>
-          <li><a href="#contact">Kontakt</a></li>
+            <li class="navitem"><a href="#about" class="nav-link">Cases</a></li>
+            <li class="navitem"><a href="#services" class="nav-link">Services</a></li>
+            <li class="navitem"><a href="#portfolio" class="nav-link">Om os</a></li>
+            <li class="navitem"><a href="#contact" class="nav-link">Kontakt</a></li>
         </ul>
-      </header>
+        <div class="burgermenu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div>
+    </header>
 
       <main id="price-calc">
         <h2>Hvad kan vi hjælpe dig med?</h2>
