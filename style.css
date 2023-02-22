@@ -140,29 +140,26 @@ a.active {
 }
 
 /* Case section */
-.cases {
+.cases{
   margin: auto var(--margin);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.case-hr {
+.case-hr{
   margin-top: 20px;
   width: auto;
 }
 
-.case-link {
+.case-link{
   font-size: 0.875rem;
   margin: 0px;
 }
 
-.case img {
-  width: 600px;
-}
-
-.case {
+.case{
   margin-bottom: 75px;
+  width: clamp(200px, 35vw, 600px);
 }
 
 /* Cookie section */
@@ -322,12 +319,12 @@ footer h4 {
   opacity: 0;
   filter: blur(50px);
   transform: translateX(-200px);
-  transition: all 1s ease;
+  transition: transform 1s ease, filter 1s ease, opacity 1s ease;
 }
 .hidden2 {
   opacity: 0;
   transform: translateX(-200px);
-  transition: all 1s ease;
+  transition: transform 1s ease, opacity 1s ease;
 }
 .show2 {
   opacity: 1;
@@ -372,7 +369,7 @@ footer h4 {
     white-space: nowrap;
   }
 
-  /* Case section */
+  /* Case section
   .cases{
     margin: auto var(--margin);
     display: flex;
@@ -396,7 +393,7 @@ footer h4 {
 
   .case{
     margin-bottom: 75px;
-  }
+  } */
 
 
 
@@ -605,6 +602,11 @@ footer h4 {
       transition: opacity 0.3s ease;
     }
 
+    .case{
+      margin-bottom: 75px;
+      width: clamp(200px, 80vw, 600px);
+    }
+
   }
 
 
@@ -669,13 +671,17 @@ footer h4 {
     min-height: 200px;
   }
 
+  #form2 div{
+    position: relative;
+  }
+
   .price-calc-top{
     display: flex;
     justify-content: space-between;
   }
 
   .price-calc-top form{
-    min-width: 38vw;
+    width: 32vw;
     background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
@@ -686,6 +692,7 @@ footer h4 {
   /* Checkboxes */
   [type="checkbox"]{
     opacity: 0;
+    position: absolute;
   }
   [type="checkbox"] + label{
     position: relative;
@@ -698,7 +705,7 @@ footer h4 {
   [type="checkbox"] + label::before{
     content: "";
     position: absolute;
-    left: 0;
+    left: 0px;
     top: 0;
     width: 18px;
     height: 18px;
@@ -725,6 +732,7 @@ footer h4 {
 
   [type="radio"]{
     opacity: 0;
+    position: absolute;
   }
   [type="radio"] + label{
     position: relative;

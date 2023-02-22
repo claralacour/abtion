@@ -6,6 +6,7 @@ const form2 = document.getElementById("form2");
 const radioWebsite = document.getElementById("radio-website");
 const radioApp = document.getElementById("radio-app");
 const radioSystem = document.getElementById("radio-system");
+const radioUi = document.getElementById("radio-ui");
 let form2Array;
 
 let price = 0;
@@ -17,10 +18,13 @@ form1.addEventListener("change", function(){
     form2Array = ["new-website|Opbygning af ny website|100|option", "webshop|Webshop til eksisterende hjemmeside|200|option", "redesign-website|Redesign af eksisterende website|50|option", "maintain-website|Vedligeholdelse|50|option"];
   } else if (radioApp.checked){
     form2.innerHTML = ""
-    form2Array = ["simple-app|Udvikling af simpel app", "advanced-app|Udvikling af app med flere eller avancerede funktioner", "app-update|Opdatering/ forbedring af eksisterende app", "ui|Design af UI/UX"];
+    form2Array = ["simple-app|Udvikling af simpel app|200|option", "advanced-app|Udvikling af app med flere eller avancerede funktioner|400|option", "app-update|Opdatering/ forbedring af eksisterende app|80|option"];
   } else if (radioSystem.checked){
     form2.innerHTML = ""
-    form2Array = ["system|Udvikling af mindre internt system (Fx til lager og ordrehåndtering)", "advanced-system|Udvikling af komplekse systemer med integrering i nuværende systemer"];
+    form2Array = ["system|Udvikling af mindre internt system (Fx til lager og ordrehåndtering)|200|option", "advanced-system|Udvikling af komplekse systemer|450|option", "integration|Integrering med eksisterende systemer|150|option"];
+  } else if (radioUi.checked){
+    form2.innerHTML = ""
+    form2Array = ["brugertest|Design og udførsel af brugertest|80|option", "Wireframes|Wireframes til din brugerflade|50|option", "ui|Fuldt grafisk design af din brugerflade|120|option"];
   } 
 
   for (let i in form2Array){
@@ -55,9 +59,18 @@ function calcPrice() {
     }
   }
   price = price.toLocaleString("de-DE");
-  priceField.innerHTML = price + " kr.";
+  priceField.innerHTML = "Fra " + price + " kr.";
+  if (price == 0){
+    priceField.innerHTML = "0 kr.";
+  }
 }
+
 
 form2.addEventListener("change", function() {
   calcPrice();
 })
+
+form1.addEventListener("change", function() {
+  calcPrice();
+})
+
