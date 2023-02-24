@@ -150,7 +150,6 @@ popupContainer.addEventListener('click', (e) =>{
  } else if (boxOpen == true) {
    popupContainer.classList.remove('show');
    popUpInput.value = "";
-   popUpInput.style.backgroundColor = "#ffffff";
  } else {
    return;
  }
@@ -173,8 +172,7 @@ function validation(email){
 }
 
 
-//Fjern rød border ved klik
+//Fjern shake 
 popUpInput.addEventListener('click', () => {
  popUpBox.classList.remove('shake-animation');
- popUpInput.style.backgroundColor = "#ffffff";
 })
