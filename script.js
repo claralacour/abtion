@@ -134,7 +134,6 @@ let emailList = ['example@mail.com','example2@mail.com','example3@mail.com'];
 openForm.addEventListener('click', () => {
  popupContainer.classList.add('show');
  boxOpen = true;
- console.log("hej")
 });
 
 
@@ -162,7 +161,6 @@ popupContainer.addEventListener('click', (e) =>{
 function validation(email){
  let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
  if (email.match(pattern)){
-   console.log("Match");
    emailList.push(email);
    console.log(emailList);
    popupContainer.classList.remove('show');
@@ -170,7 +168,6 @@ function validation(email){
    boxOpen = false;
  }
  else{
-   console.log("Fejl");
    popUpBox.classList.add("shake-animation");
  }
 }
