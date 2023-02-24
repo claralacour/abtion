@@ -118,8 +118,8 @@ hiddenElements2.forEach((el) => observer.observe(el));
 
 
 
-//------------------------------Newsletter---------------------------------------
-//Variabler
+//------------------------------Newsletter--------------------------------------- 
+//Variabler 
 const openForm = document.getElementById('open');
 const popupContainer = document.querySelector('.popup-container');
 const send = document.getElementById('send');
@@ -172,7 +172,7 @@ function validation(email){
 }
 
 
-//Fjern shake 
+//Fjern shake
 popUpInput.addEventListener('click', () => {
  popUpBox.classList.remove('shake-animation');
 })
